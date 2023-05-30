@@ -1,3 +1,10 @@
+-- Grouping Total Debt
+SELECT concat(datafc.FirstName," ", datafc.LastName) AS Name_FC, SUM(customer.Total_Debt) AS TotalDebt
+FROM datafc
+JOIN customer ON
+datafc.AreaID = customer.AreaID
+GROUP BY datafc.firstname," ",datafc.LastName;
+
 -- Achievement Field Agent
 SELECT concat(firstname," ", lastname) AS FC_Name, 
 round((Amount_Collect/Total_debt)*100, 2) AS Achievement,
@@ -36,5 +43,6 @@ concat(spv.firstname," ",spv.lastname) AS SPV_name FROM datafc
 JOIN SPV ON
 datafc.SpvID = spv.nik;
 
+-- Over
 SELECT concat(firstname," ",lastname) AS Name, gender, count(gender) OVER (partition by gender) AS Gender_1,
 Bucket, Count(Bucket) OVER (Partition by bucket) AS Bucket_1 FROM datafc;
