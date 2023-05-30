@@ -1,0 +1,8 @@
+-- Subquery
+SELECT concat(Firstname," ", Lastname) AS FC_Name, AVG(Salary) FROM Salary
+WHERE Salary > (
+SELECT Avg(salary) FROM salary);
+
+SELECT concat(firstname," ",Lastname), Salary FROM salary
+HAVING salary > (
+SELECT AVG(salary) FROM salary); 
