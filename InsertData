@@ -1,0 +1,89 @@
+INSERT INTO datafc
+Values
+(10001, 'Adi','Yandi','Male','2017-01-10','Early','50001','20001'),
+(10002, 'Ani','Yanti','Female','2017-01-17','Early','50001','20001'),
+(10003, 'Ami','Santi','Female','2017-01-17','Early','50001','20001'),
+(10004, 'Andi','Sapto','Male','2017-01-20','Early','50001','20001'),
+(10005, 'Anto','Yandi','Male','2017-01-22','Early','50001','20001'),
+(10006, 'Adi','Yandi','Male','2017-01-10','Early','50001','20001'),
+(10007, 'Radit','Nugroho','Male','2017-02-05','Late','50002','20002'),
+(10008, 'Ade','Putri','Female','2017-02-09','Late','50002','20002'),
+(10009, 'Awal','Aliyah','Female','2017-02-05','Late','50002','20002'),
+(10010, 'Susanti','Hamzah','Female','2017-02-11','Late','50002','20002'),
+(10011, 'Albert','Susanto','Male','2017-02-16','Late','50002','20002'),
+(10012, 'Desi','Purnama','Female','2017-02-17','Late','50002','20002')
+;
+
+Insert Into Area 
+Values
+('50001','Ciganjur','Jagakarsa','South Jakarta'),
+('50001','Tanjung Barat','Jagakarsa','South Jakarta'),
+('50001','Lenteng Agung','Jagakarsa','South Jakarta'),
+('50001','Srenseng Sawah','Jagakarsa','South Jakarta'),
+('50001','Cipedak','Jagakarsa','South Jakarta'),
+('50002','Cipete','Cilandak','South Jakarta'),
+('50002','Gandaria','Cilandak','South Jakarta'),
+('50002','Pondok Labu','Cilandak','South Jakarta'),
+('50002','Lebak Bulus','Cilandak','South Jakarta'),
+('50002','Cilandak Barat','Cilandak','South Jakarta')
+;
+
+INSERT INTO spv
+values
+(20001,'Ardi','Lesmana','Male','2017-01-05','50001'),
+(20002,'Rifky','Widianto','Male','2017-01-05','50002'),
+(20003,'Sabar','Priyanto','Male','2017-01-06','50003'),
+(20004,'Mawar','Melati','Female','2017-01-09','50004'),
+(20005,'Susanti','Putri','Female','2017-01-11','50005')
+;
+
+INSERT INTO salary
+VALUES
+(20001,'Ardi','Lesmana','Male',9500000),
+(20002,'Rifky','Widianto','Male',9000000),
+(20003,'Sabar','Priyanto','Male',9800000),
+(20004,'Mawar','Melati','Female',10000000),
+(20005,'Susanti','Putri','Female',10000000),
+(10001, 'Adi','Yandi','Male',5000000),
+(10002, 'Ani','Yanti','Female',4800000),
+(10003, 'Ami','Santi','Female',4750000),
+(10004, 'Andi','Sapto','Male',4500000),
+(10005, 'Anto','Yandi','Male',4650000),
+(10006, 'Adi','Yandi','Male',5000000),
+(10007, 'Radit','Nugroho','Male',4450000),
+(10008, 'Ade','Putri','Female',4500000),
+(10009, 'Awal','Aliyah','Female',4900000),
+(10010, 'Susanti','Hamzah','Female',5150000),
+(10011, 'Albert','Susanto','Male',5000000),
+(10012, 'Desi','Purnama','Female',4800000)
+;
+
+INSERT INTO perfomance
+Values
+(10001, 'Adi','Yandi',755000000,174500000,'March'),
+(10002, 'Ani','Yanti',700000000,448000000,'March'),
+(10003, 'Ami','Santi',689000000,400750000,'March'),
+(10004, 'Andi','Sapto',800000000,576500000,'March'),
+(10005, 'Anto','Yandi',700000000,406500000,'March'),
+(10006, 'Adi','Yandi',700000000,500000000,'March'),
+(10007, 'Radit','Nugroho',650000000,433450000,'March'),
+(10008, 'Ade','Putri',960000000,645000000,'March'),
+(10009, 'Awal','Aliyah',846000000,409000000,'March'),
+(10010, 'Susanti','Hamzah',760000000,598150000,'March'),
+(10011, 'Albert','Susanto',500000000,276000000,'March'),
+(10012, 'Desi','Purnama',176000000,470800000,'March')
+;
+
+INSERT INTO customer
+VALUES
+(30001,'Yuki','Fernando','Male','Perum Suropati Metropole F11/26',700000,14000000,20,50001),
+(30002,'Fandi','Messi','Male','Perum Kebon Residence B1/6',650000,7800000,12,50001),
+(30003,'Kaoru','Minamino','Male','Perum Brighton Terang A22/60',500000,12000000,24,50001),
+(30004,'Steven','Firmino','Male','Jl. Simpang Panjang No. 56',1000000,36000000,36,50001),
+(30005,'Enzo','Aguero','Male','Jl. Santa Fe Rosario No. 10',900000,16200000,18,50001),
+(30006,'Fitri','Fitra','Female','Perum Tadika Mesra C34/12',250000,9000000,36,50002),
+(30007,'Fatma','Febrianti','Female','Perum Durian Runtuh D22/11',250000,9000000,36,50002),
+(30008,'Dina','Dini','Female','Jl. Sepanjang No 14',850000,15300000,18,50002),
+(30009,'Astuti','Astuta','Female','Perum Tadika Mesra G19/11',1150000,13800000,12,50002),
+(30010,'Fulanah','Fulan','Female','Jl. Kemana Mana No 104',1000000,24000000,24,50002)
+;
