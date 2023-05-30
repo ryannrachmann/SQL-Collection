@@ -1,0 +1,27 @@
+-- Count Employee, Group by Gender
+SELECT count(datafc.NIK) AS Employee, gender FROM datafc
+GROUP BY gender;
+
+-- Having
+SELECT concat(FirstName," ", LastName) AS Name, round((Amount_Collect/Total_Debt)*100, 2) AS Achievement
+FROM perfomance
+HAVING Achievement > 55.00
+ORDER BY Achievement DESC
+LIMIT 5;
+
+-- Date
+SELECT * FROM datafc
+ORDER BY JoinDate DESC; 
+
+SELECT * FROM datafc
+WHERE JoinDate > '2017-01-20'
+ORDER BY JoinDate DESC;
+
+-- Wildcards
+SELECT * FROM datafc
+WHERE FirstName LIKE '%n%';
+
+-- SUM & AVG Salary
+SELECT AVG(salary) AS AVG_Salary FROM salary;
+
+SELECT SUM(salary) AS Total_Salary FROM salary;
