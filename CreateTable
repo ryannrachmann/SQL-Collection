@@ -1,0 +1,55 @@
+Create Table datafc (
+NIK Int,
+FirstName varchar(25),
+LastName varchar(25),
+Gender varchar(10),
+JoinDate date,
+Bucket varchar(10),
+AreaID varchar(10),
+SpvID int
+);
+
+CREATE TABLE Area (
+AreaID int,
+District varchar(50),
+City varchar(50),
+Province varchar(50)
+);
+
+CREATE TABLE SPV (
+NIK int,
+FirstName varchar(25),
+LastName varchar(25),
+Gender varchar(10),
+JoinDate date,
+AreaID int
+);
+
+create table customer (
+CustID int,
+FirstName varchar(25),
+LastName varchar(25),
+Gender varchar(10),
+Address varchar(250),
+Monthly_Installment int,
+Total_Debt Int,
+Loan_Period Int,
+AreaID int
+);
+
+create table salary (
+NIK Int,
+FirstName varchar (50),
+LastName varchar (50),
+Gender varchar (10),
+Salary int
+);
+
+Create table perfomance (
+NIK int,
+FirstName varchar(25),
+LastName varchar(25),
+Total_Debt Int,
+Amount_Collect Int,
+Month date
+);
