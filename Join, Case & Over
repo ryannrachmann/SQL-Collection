@@ -1,0 +1,40 @@
+-- Achievement Field Agent
+SELECT concat(firstname," ", lastname) AS FC_Name, 
+round((Amount_Collect/Total_debt)*100, 2) AS Achievement,
+CASE
+WHEN Round((Amount_Collect/Total_Debt)*100, 2)
+    > 85.00 then 'Top Performance'
+    WHEN Round((Amount_Collect/Total_Debt)*100, 2)
+    > 50.00 AND Round((Amount_Collect/Total_Debt)*100, 2)
+    < 80.00 THEN 'Middle Performance'
+    ELSE 'Bottom Performance'
+END AS 'Notes'
+from perfomance
+ORDER BY Achievement DESC;
+
+-- Achievement SPV
+SELECT SPV.NIK, concat(Spv.Firstname," ",Spv.Lastname) AS SPV_Name,
+Round(AVG((perfomance.Amount_Collect/perfomance.Total_Debt)*100), 2) AS SPV_Achievement,
+Case
+	WHEN Round(AVG((perfomance.Amount_Collect/perfomance.Total_Debt)*100), 2)
+    > 85.00 then 'Top Performance'
+    WHEN Round(AVG((perfomance.Amount_Collect/perfomance.Total_Debt)*100), 2)
+    > 50.00 AND Round(AVG((perfomance.Amount_Collect/perfomance.Total_Debt)*100), 2)
+    < 80.00 THEN 'Middle Performance'
+    ELSE 'Bottom Performance'
+END AS 'Notes'
+FROM spv
+JOIN datafc ON
+SPV.NIK = datafc.spvID
+JOIN perfomance ON
+datafc.NIK = perfomance.NIK
+GROUP BY spv.NIK, concat(Spv.Firstname," ",Spv.Lastname);
+
+-- Pairing FC Name with SPV Name
+SELECT concat(datafc.firstname," ", datafc.lastname) AS FC_Name,
+concat(spv.firstname," ",spv.lastname) AS SPV_name FROM datafc
+JOIN SPV ON
+datafc.SpvID = spv.nik;
+
+SELECT concat(firstname," ",lastname) AS Name, gender, count(gender) OVER (partition by gender) AS Gender_1,
+Bucket, Count(Bucket) OVER (Partition by bucket) AS Bucket_1 FROM datafc;
